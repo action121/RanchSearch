@@ -77,7 +77,7 @@
     }
     typeof(self) __weak weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        weakSelf.radarView.labelText = [NSString stringWithFormat:@"搜索已完成，共找到%u个目标",self.radiuArr.count*3];
+        weakSelf.radarView.labelText = [NSString stringWithFormat:@"搜索已完成，共找到%lu个目标",self.radiuArr.count*3];
         [weakSelf.radarView show];
         [weakSelf.radarView.indicatorView removeFromSuperview];
         if (!weakSelf.isFristInto) {
@@ -116,7 +116,7 @@
 }
 
 - (void)radarView:(WWQRadarView *)radarView didSelectedItemIndex:(NSInteger)index{
-    NSLog(@"点击了第%d个目标",index);
+    NSLog(@"点击了第%ld个目标",(long)index);
 }
 
 

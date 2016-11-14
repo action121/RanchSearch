@@ -54,7 +54,11 @@
     radarView.backgroundColor = [UIColor colorWithRed:0.251 green:0.329 blue:0.490 alpha:1];
     radarView.backgroundImage = [UIImage imageNamed:@"radar_background"];
     radarView.labelText = @"正在搜索附近的目标";
-    [self.view.layer insertSublayer:radarView.layer atIndex:0];
+    [self.view addSubview:radarView];
+    [self.view sendSubviewToBack:radarView];
+    //    [self.view.layer insertSublayer:radarView.layer atIndex:0];
+
+
     self.radarView = radarView;
 
     [self.radarView scan];

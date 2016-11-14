@@ -11,8 +11,9 @@
 @class WWQRadarView;
 
 @protocol WWQRadarViewDelegate <NSObject>
-- (void)radarView:(WWQRadarView *)radarView didSelectedItemIndex:(NSInteger)index;
+
 @optional
+- (void)radarView:(WWQRadarView *)radarView didSelectItemIndex:(NSInteger)index;
 
 @end
 

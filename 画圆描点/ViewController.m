@@ -119,7 +119,7 @@
     return imageView;
 }
 
-- (void)radarView:(WWQRadarView *)radarView didSelectedItemIndex:(NSInteger)index{
+- (void)radarView:(WWQRadarView *)radarView didSelectItemIndex:(NSInteger)index{
     NSLog(@"点击了第%ld个目标",(long)index);
 }
 
